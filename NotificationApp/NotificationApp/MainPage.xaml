@@ -2,10 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:NotificationApp"
+             xmlns:vm="clr-namespace:NotificationApp.ViewModels"
              x:Class="NotificationApp.MainPage">
+    <ContentPage.BindingContext>
+        <vm:MainViewModel />
+    </ContentPage.BindingContext>
 
-	<Label Text="Welcome to Xamarin.Forms!" 
+    <Label Text="{Binding FirebaseMessage}" 
            VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+           HorizontalOptions="Center">
+    </Label>
 
 </ContentPage>
