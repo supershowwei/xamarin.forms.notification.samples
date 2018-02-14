@@ -245,3 +245,4 @@ ModelManifest.xml
 .fake/
 
 google-services.json
+GoogleService-Info.plist
