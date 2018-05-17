@@ -61,6 +61,8 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AndroidClickActionValue.cs" />
+    <Compile Include="AndroidClickActionValueWrapper.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,6 +91,10 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\NotificationApp.Protocol\NotificationApp.Protocol.csproj">
+      <Project>{40e900b0-227f-462b-9f10-107c4f60e3a6}</Project>
+      <Name>NotificationApp.Protocol</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NotificationApp\NotificationApp.csproj">
       <Project>{06C94836-9720-4EB6-935F-CBE033E2FA06}</Project>
       <Name>NotificationApp</Name>

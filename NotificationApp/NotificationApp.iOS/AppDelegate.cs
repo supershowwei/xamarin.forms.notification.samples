@@ -75,5 +75,13 @@ namespace NotificationApp.iOS
         {
             System.Diagnostics.Debug.WriteLine($"DidRefreshRegistrationToken FCM Token: {fcmToken}");
         }
+
+        public override void ReceivedRemoteNotification(UIApplication application, NSDictionary userInfo)
+        {
+            if (userInfo.ObjectForKey(new NSString("aps")) is NSDictionary aps)
+            {
+                IOSClickActionValue.Instance.Set((aps[new NSString("category")] as NSString).ToString());
+            }
+        }
     }
 }
